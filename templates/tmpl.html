@@ -1,0 +1,46 @@
+<div id="main" hx-swap-oob="innerHTML" class="row">
+    <!-- performance section -->
+    <div class="col-12 col-md-6 section" data-section="perf">
+        <div class="mb-4">
+            <h3>
+                <img src="/static/resources/computer.svg" alt="System Icon" width="30" height="30" class="me-2">
+                System Information
+            </h3>
+            {{ .SysTmpl }}
+        </div>
+
+        <div>
+            <h3>
+                <img src="/static/resources/disk.svg" alt="Disk Icon" width="30" height="30" class="me-2"> 
+                Disk Information
+            </h3>
+            {{ .DiskTmpl }}
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 section" data-section="perf">
+        <h3>
+            <img src="/static/resources/proc.svg" alt="CPU Icon" width="30" height="30" class="me-2"> 
+            CPU Information
+        </h3>
+        {{ .CpuTmpl }}
+    </div>
+
+    <!-- Process section -->
+    <div class="col-12 section" data-section="proc">
+        <h3>
+            <img src="/static/resources/proc.svg" alt="CPU Icon" width="30" height="30" class="me-2">
+            Processes
+        </h3>
+        {{ .ProcessesTmpl }}        
+    </div>
+
+    <!-- Netstat section -->
+    <div class="col-12 section" data-section="net">
+        <h3>
+            <img src="/static/resources/proc.svg" alt="CPU Icon" width="30" height="30" class="me-2">
+            Netstat
+        </h3>
+        {{ .NetTmpl }}        
+    </div>
+</div>

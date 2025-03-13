@@ -1,0 +1,42 @@
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Model</th>
+            <td>{{.Model}}</td>
+        </tr>
+        <tr>
+            <th>Family</th>
+            <td>{{.Family}}</td>
+        </tr>
+        <tr>
+            <th>Run at</th>
+            <td>{{.MHz}} MHz</td>
+        </tr>
+        <tr>
+            <th>Cache size</th>
+            <td>{{.CacheSize | ConvertByte}}</td>
+        </tr>
+        <tr>
+            <th>Total Usage</th>
+            <td>{{ printf "%.2f" .TotalUsage}} %</td>
+        </tr>
+        {{ range $index, $value := .UsagePerCores }}
+        <tr>
+            <th>Core {{ $index }}</th>
+            <td>{{ printf "%.2f" $value }} %</td>
+        </tr>
+        {{ end }}
+        <tr>
+            <th>Short-term load average</th>
+            <td>{{.Load1}}</td>
+        </tr>
+        <tr>
+            <th>Mid-term load average</th>
+            <td>{{.Load5}}</td>
+        </tr>
+        <tr>
+            <th>Long-term load average</th>
+            <td>{{.Load15}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Partition</th>
+            <th>Total</th>
+            <th>Free</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range . }}
+        <tr>
+            <td>{{ .DeviceName }}</td>
+            <td>{{ .Total | ConvertByte }}</td>
+            <td>{{ .Free | ConvertByte }}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>

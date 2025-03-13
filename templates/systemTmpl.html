@@ -1,0 +1,32 @@
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Hostname</th>
+            <td>{{.Hostname}}</td>
+        </tr>
+        <tr>
+            <th>Runtime OS</th>
+            <td>{{.RuntimeOS}}</td>
+        </tr>
+        <tr>
+            <th>Platform</th>
+            <td>{{.Platform}}</td>
+        </tr>
+        <tr>
+            <th>Platform Family</th>
+            <td>{{.PlatformFamily}}</td>
+        </tr>
+        <tr>
+            <th>Platform Version</th>
+            <td>{{.PlatformVersion}}</td>
+        </tr>
+        <tr>
+            <th>Total VM</th>
+            <td>{{.TotalVM | ConvertByte}}</td>
+        </tr>
+        <tr>
+            <th>Used VM</th>
+            <td>{{.UsedVM | ConvertByte}}</td>
+        </tr>
+    </tbody>
+</table>

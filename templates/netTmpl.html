@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>PID</th>
+            <th>Process Name</th>
+            <th>Type</th>
+            <th>Local address</th>
+            <th>Remote address</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range . }}
+        <tr>
+            <td>{{ .PID }}</td>
+            <td>{{ .ProcessName }}</td>
+            <td>{{ .Type }}</td>
+            <td>{{  .LocalAddr | DisplayAddress }}</td>
+            <td>{{  .RemoteAddr | DisplayAddress }}</td>
+            <td>{{ .Status }}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
